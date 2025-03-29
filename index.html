@@ -3,20 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 Not Found</title>
+    <title>Accessible Contact Form</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <main>
     <div class="container">
-        <h1>404</h1>
-        <p>Oops! The page you are looking for does not exist.</p>
-        <a href="#" class="button">Go Back</a>
+        <h1>Contact Us</h1>
+        <p class="form-description">Fields marked with an asterisk (*) are required.</p>
+        
+        <form action="#" method="post" novalidate>
+            <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" required 
+                       aria-required="true" autocomplete="name">
+                <div class="error-message" id="name-error" aria-live="polite"></div>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required 
+                       aria-required="true" autocomplete="email">
+                <div class="error-message" id="email-error" aria-live="polite"></div>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" 
+                       autocomplete="tel" aria-describedby="phone-hint">
+                <p id="phone-hint" class="hint-text">Example: (555) 555-5555</p>
+            </div>
+            
+            <div class="form-group">
+                <fieldset>
+                    <legend>Preferred Contact Method *</legend>
+                    <div class="radio-group">
+                        <input type="radio" id="contact-email" name="contact-method" value="email" required>
+                        <label for="contact-email">Email</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="contact-phone" name="contact-method" value="phone">
+                        <label for="contact-phone">Phone</label>
+                    </div>
+                </fieldset>
+            </div>
+            
+            <div class="form-group">
+                <label for="subject">Subject *</label>
+                <select id="subject" name="subject" required aria-required="true">
+                    <option value="" disabled selected>Please select a subject</option>
+                    <option value="general">General Inquiry</option>
+                    <option value="support">Technical Support</option>
+                    <option value="billing">Billing Question</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Your Message *</label>
+                <textarea id="message" name="message" rows="5" required 
+                          aria-required="true"></textarea>
+                <div class="error-message" id="message-error" aria-live="polite"></div>
+            </div>
+            
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="newsletter" name="newsletter">
+                <label for="newsletter">Subscribe to our newsletter</label>
+            </div>
+            
+            <div class="form-actions">
+                <button type="submit" class="btn-submit">Submit</button>
+                <button type="reset" class="btn-reset">Reset Form</button>
+            </div>
+        </form>
     </div>
-    
+</main>
+
   <!-- Web Design and Web Development by Ken Ekweme [OTek Solutions]. More info: /humans.txt -->
-  <footer class="developer-footer">
-    <p>Website by <a href="https://www.linkedin.com/in/ekweme-ken" target="_blank" rel="noopener noreferrer nofollow" title="Web Designer &amp; Developer">Ken Ekweme</a> &bull; <a href="https://www.oteksolutions.net" target="_blank" rel="noopener noreferrer nofollow" title="Designed and Developed by OTek Solutions">OTek Solutions</a> <a href="/humans.txt" style="font-size: 0.65rem;" target="_blank" title="Credits"><strong>&#x24D8;</strong></a></p>
-  </footer>
+	<footer class="developer-footer">
+		<p>Web Project by <a href="https://www.linkedin.com/in/ekweme-ken" target="_blank" rel="noopener noreferrer nofollow" title="Web Designer &amp; Developer">Ken Ekweme</a> &bull; <a href="https://www.oteksolutions.net" target="_blank" rel="noopener noreferrer nofollow" title="Designed and Developed by OTek Solutions">OTek Solutions</a> <a href="/humans.txt" style="font-size: 0.65rem;" target="_blank" title="Credits"><strong>&#x24D8;</strong></a></p>
+	</footer>
     
 </body>
 </html>
