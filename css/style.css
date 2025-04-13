@@ -244,16 +244,55 @@ a[href*="humans"] {
   cursor: help;
 }
 
-
-
-
-
-@media (max-width: 600px) {
-  h1 {
-    font-size: 6rem;
+/* Responsive Design */
+@media (max-width: 768px) {
+  .error-code {
+      font-size: 6rem;
   }
-  
-  p {
-    font-size: 1.2rem;
+
+  .error-planet {
+      width: 90px;
+      height: 90px;
+  }
+
+  .error-content h1 {
+      font-size: 2rem;
+  }
+
+  .error-message {
+      font-size: 1.2rem;
+  }
+
+  .button {
+      padding: 0.7rem 1.2rem;
+      font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .error-code {
+      font-size: 4rem;
+  }
+
+  .error-planet {
+      width: 70px;
+      height: 70px;
+  }
+
+  .error-content h1 {
+      font-size: 1.5rem;
+  }
+
+  .action-buttons {
+      flex-direction: column;
+      gap: 0.8rem;
+  }
+
+  .button {
+      width: 100%;
+  }
+
+  .error-content {
+      padding: 2rem 1rem;
   }
 }
