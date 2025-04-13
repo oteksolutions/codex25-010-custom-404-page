@@ -144,32 +144,28 @@ body {
   filter: blur(2px);
 }
 
-
-
-
-
-
-
-
-.container {
-  text-align: center;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.error-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(to right, #ffffff, #c9d6ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
-div h1 {
-  font-size: 8rem;
-  margin: 0;
-  color: #333;
-}
-
-div p {
+.error-message {
   font-size: 1.5rem;
   margin: 20px 0;
-  color: #666;
+  color: #e0e0e0;
+  line-height: 1.6;
 }
+
+
+
+
+
+
+
 
 .button {
   display: inline-block;
