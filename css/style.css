@@ -11,8 +11,9 @@ html {
 
 body {
   min-height: 100%;
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  font-family: 'Poppins', Arial, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
   position: relative;
   padding-bottom: 50px;
 }
